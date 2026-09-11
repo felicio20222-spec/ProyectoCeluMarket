@@ -5,30 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mi página</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-   
 </head>
 
 <body>
 
- <nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-    <div class="nav-left">
-        <a href="/">Index</a>
-        <a href="#">Celulares</a>
-    </div>
+        <a href="/" class="logo">
+            MiWeb
+        </a>
 
-    <div class="nav-right">
-        <a href="#">Nosotros</a>
-        <a href="/registro">Registro</a>
-        <a href="/login">Login</a>
-    </div>
+        <div class="nav-left">
+            <a href="/">Inicio</a>
+            <a href="/Celulares.blade.php">Celulares</a>
+        </div>
 
-</nav>
+        <div class="nav-right">
+            <a href="/Nosotros">Nosotros</a>
+            <a href="/login">Login</a>
+             <div class="register"></div>
+          <a href="/registro">Registrate</a>
+        </div>
+    </nav>
 
-    <main>
-        <h1>Mi página</h1>
+
+    <!-- CONTENIDO -->
+    <main class="main">
+
+        <section class="hero">
+
+            <h1>Bienvenido a MiWeb</h1>
+
+            <p>
+                Una página simple, moderna y casual.
+                Acá vas a poder encontrar información sobre celulares
+                y mucho más.
+            </p>
+
+            <a href="/Celulares" class="btn">
+                Ver celulares
+            </a>
+
+        </section>
+
+
+        <!-- TARJETAS -->
+        <section class="cards">
+
+            <div class="card">
+                 <a href="/Celulares">Celulares</a>
+
+                <p>
+                    Mira diferentes celulares y descubre
+                    sus características.
+                    
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h2>👥 Nosotros</h2>
+
+                <p>
+                    Conoce un poco más sobre nuestra página
+                    y lo que hacemos.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h2>🔐 Cuenta</h2>
+
+                <p>
+                    Inicia sesión para acceder a más
+                    funciones de la página.
+                </p>
+            </div>
+
+
+            
+
+        </section>
+
     </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        © 2026 MiWeb - Todos los derechos reservados.
+
+    </footer>
 
 </body>
 </html>

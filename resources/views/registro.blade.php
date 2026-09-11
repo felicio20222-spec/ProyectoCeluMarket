@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +7,7 @@
 
     <title>Registrarse</title>
 
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/registro .css') }}">
 </head>
 
 <body>
@@ -65,6 +65,8 @@
                 >
             </div>
 
+ 
+
             <div class="form-group">
                 <label for="password_confirmation">Confirmar contraseña</label>
                 <input
@@ -91,4 +93,4 @@
 
 </body>
 </html>
-```
+
