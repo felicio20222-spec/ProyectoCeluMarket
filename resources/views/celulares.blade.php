@@ -22,82 +22,42 @@
 
         <div class="productos-grid">
 
-            <!-- Producto 1 -->
-            <div class="producto-card">
+            @foreach ($productos as $producto)
 
-                <div class="producto-imagen">
-                    📱
-                </div>
+                <div class="producto-card">
 
-                <div class="producto-info">
+                    <div class="producto-imagen">
+                        📱
+                    </div>
 
-                    <h2>iPhone 15</h2>
+                    <div class="producto-info">
 
-                    <p class="precio">$45.000</p>
+                        <h2>{{ $producto->nombre }}</h2>
 
-                    <p class="stock">
-                        Stock: 5 unidades
-                    </p>
+                        <p class="marca">
+                            {{ $producto->marca }}
+                        </p>
 
-                    <button class="btn-carrito">
-                        Agregar al carrito
-                    </button>
+                        <p class="precio">
+                            ${{ number_format($producto->precio, 0, ',', '.') }}
+                        </p>
 
-                </div>
+                        <p class="stock">
+                            Stock: {{ $producto->stock }} unidades
+                        </p>
 
-            </div>
+                        <form action="{{ route('carrito.agregar', $producto->id) }}" method="POST">
+                            @csrf
 
-
-            <!-- Producto 2 -->
-            <div class="producto-card">
-
-                <div class="producto-imagen">
-                    📱
-                </div>
-
-                <div class="producto-info">
-
-                    <h2>Samsung Galaxy A55</h2>
-
-                    <p class="precio">$28.000</p>
-
-                    <p class="stock">
-                        Stock: 8 unidades
-                    </p>
-
-                    <button class="btn-carrito">
-                        Agregar al carrito
-                    </button>
+                            <button type="submit" class="btn-carrito">
+                                Agregar al carrito
+                            </button>
+                        </form>                      
+                    </div>
 
                 </div>
 
-            </div>
-
-
-            <!-- Producto 3 -->
-            <div class="producto-card">
-
-                <div class="producto-imagen">
-                    📱
-                </div>
-
-                <div class="producto-info">
-
-                    <h2>Xiaomi Redmi Note 13</h2>
-
-                    <p class="precio">$22.000</p>
-
-                    <p class="stock">
-                        Stock: 12 unidades
-                    </p>
-
-                    <button class="btn-carrito">
-                        Agregar al carrito
-                    </button>
-
-                </div>
-
-            </div>
+            @endforeach
 
         </div>
 

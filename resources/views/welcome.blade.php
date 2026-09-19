@@ -20,11 +20,11 @@
 
         <div class="nav-left">
             <a href="/">Inicio</a>
-            <a href="/Celulares.blade.php">Celulares</a>
+            <a href="/celulares">Celulares</a>
         </div>
 
         <div class="nav-right">
-            <a href="/Nosotros">Nosotros</a>
+            <a href="/nosotros">Nosotros</a>
             <a href="/login">Login</a>
              <div class="register"></div>
           <a href="/registro">Registrate</a>
@@ -45,7 +45,7 @@
                 y mucho más.
             </p>
 
-            <a href="/Celulares" class="btn">
+            <a href="/celulares" class="btn">
                 Ver celulares
             </a>
 
@@ -56,7 +56,7 @@
         <section class="cards">
 
             <div class="card">
-                 <a href="/Celulares">Celulares</a>
+                 <a href="/celulares">Celulares</a>
 
                 <p>
                     Mira diferentes celulares y descubre
